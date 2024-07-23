@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login with Google</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    h1 {
+        color: #333;
+    }
+    .btn-google {
+        display: inline-block;
+        background-color: #4285f4;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 1rem;
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    .btn-google:hover {
+        background-color: #357ae8;
+    }
+    .btn-google img {
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>You have been logged out.</h1>
+  <form action="/logout"></form>
+  <a class="btn-google" th:href="@{/oauth2/authorization/google}">
+    <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google logo">
+    Login again with Google
+  </a>
+</div>
+</body>
+</html>
+
+
